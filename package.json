@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "keywords": [
+    "textlintrule",
+    "parentheses",
+    "bracket",
+    "quote",
+    "pair",
+    "nested",
+    "match"
+  ],
+  "main": "lib/index.js",
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "scripts": {
+    "test": "npm run build && mocha test/index-test.js",
+    "build": "babel src --source-maps --out-dir lib",
+    "prepublish": "npm run --if-present build"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "mocha": "^7.1.2",
+    "textlint-tester": "^5.1.15"
+  },
+  "name": "textlint-rule-various-nested-pairs",
+  "description": "textlint rule for checking nested pairs",
+  "directories": {
+    "test": "test"
+  },
+  "author": "chenyulu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ylc395/textlint-rule-varigous-nested-paris.git"
+  },
+  "homepage": "https://github.com/ylc395/textlint-rule-varigous-nested-paris",
+  "peerDependencies": {
+    "textlint": ">= 5.5.0"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.9.6",
+    "textlint-rule-helper": "^2.1.1"
+  }
+}
